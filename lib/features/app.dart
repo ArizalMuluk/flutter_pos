@@ -15,12 +15,10 @@ class CashierApp extends StatelessWidget {
         colorScheme: ColorScheme.light(
           primary: const Color(0xFFFF4747),
           secondary: const Color(0xFF333333),
-          background: const Color(0xFFF7F7F7),
           surface: Colors.white,
           error: Colors.red,
           onPrimary: Colors.white,
           onSecondary: Colors.white,
-          onBackground: const Color(0xFF333333),
           onSurface: const Color(0xFF333333),
           onError: Colors.white,
         ),
@@ -89,7 +87,7 @@ class _MainScreenState extends State<MainScreen> {
         },
         color: _selectedIndex == index
             ? Theme.of(context).colorScheme.primary
-            : Theme.of(context).colorScheme.onBackground.withOpacity(0.6),
+            : Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
       ),
     );
   }
